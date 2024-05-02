@@ -1,5 +1,30 @@
-﻿Build started at 18:25...
-1>------ Build started: Project: ConsoleApp8, Configuration: Debug Any CPU ------
-1>  ConsoleApp8 -> C:\Users\Jakub\source\repos\ConsoleApp8\ConsoleApp8\bin\Debug\ConsoleApp8.exe
-========== Build: 1 succeeded, 0 failed, 0 up-to-date, 0 skipped ==========
-========== Build completed at 18:25 and took 00.340 seconds ==========
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Runtime.InteropServices;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Do you want to calculate the area or the cicumferece?");
+            string choice = Console.ReadLine();
+            Console.WriteLine("Enter the radius of the circle:");
+            double radius = Convert.ToInt32(Console.ReadLine());
+            if (choice == "area")
+            {
+                double area = (radius * radius * 3.14);
+                Console.WriteLine(area + " is the area");
+
+            
+            }
+
+            else
+            {
+                double cicumference = (radius * 2 * 3.14);
+                Console.WriteLine(cicumference + " is the cicumference");
+            }
